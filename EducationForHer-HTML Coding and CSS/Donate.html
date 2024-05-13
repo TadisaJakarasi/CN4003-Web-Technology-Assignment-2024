@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <title>Donate </title>
+        <link rel="stylesheet" href="Donate Style.css" /> <!--Linking the CSS for this page to this html-->
+        <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> <!--Box icons link-->
+        <!-- Load search icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> <!--font-->
+    </head>
+    <body>
+        <section class="header"> <!--This contains the logo and navigational aid-->
+            <nav><!--Contains navigational bar and nav CSS class to be called-->
+                <div class="navbar">
+                    <a href="Homepage.html"><img src="logo2.png" class="logo"></a><!--logo-->
+                    <ul> <!--Unordered list used-->
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="Get Involved.html">Get Involved</a></li>
+                        <li><a href="Testimonials.html">Testimonials</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <button class="button-nav">
+                            <a href="Donate.html">DONATE</a><!--Donate button and link to page-->
+                        </button>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <div class="image-text">
+            <img src="Donate Image 1.jpg">
+        </div>
+
+        <!--Main Content Section-->
+        <section class="donate-cont"> <!--this is a section used in structuring the webpage -This section contains the donate content of the webpage-->
+            <div class="donate-row"> <!--This div is used to structure and divide the section content into row format and class to be used for the css-->
+                <div class="donate-column"><!--This div is used to structure and divide the section content into column format and class to be used for the css-->
+                    <h1>Donate to<br>EducationForHer</h1> <!--heading and br used to skip and create a new line-->
+                    <div class="donate-form"> <!--This div is used to structure and divide the section content for the form being created and class to be used for the css-->
+                        <form action=" "><!--form being created and action is empty as it is not being submitted anywhere-->
+                              <div class="time-dates"><!--This div is used to structure and divide the section content for the times and dates donations can occur and class to be used for the css-->
+                                 <span class="time">ONE TIME</span><!--This span is used to structure and divide the inline elements of the section content for times and dates and class to be used for the css-->
+                                 <span class="time1">MONTHLY</span><!--This span is used to structure and divide the inline elements of the section content for times and dates and class to be used for the css-->
+                              </div>
+                              <div class="value"><!--This div is used to structure and divide the section content for the suggested amounts of money that can be donated and class to be used for the css-->
+                                    <span class="money1"> £25</span><!--This span is used to structure and divide the inline elements of the section content for money values and class to be used for the css-->
+                                    <span class="money2"> £50</span><!--This span is used to structure and divide the inline elements of the section content for money values and class to be used for the css-->
+                                    <span class="money3"> £100</span><!--This span is used to structure and divide the inline elements of the section content for money values and class to be used for the css-->
+                                    <span class="money4"> £250</span><!--This span is used to structure and divide the inline elements of the section content for money values and class to be used for the css-->
+                              </div>
+                              <P>£<input type="amount" name="MoneyInput"placeholder="POUNDS"></P><!--paragraph section for the amount input by user-->
+                              <hr class="line"> <!--hr representing the creation of a straight line-->
+                              <br><!--creating a new line for text or anything-->
+                              <button type="submit" name="donate-btn" value= "TestInput" onClick="ValidationCheck(this.form)" class="donate-btn"><a href=""> DEDICATE DONATION</a></button><!-- donate button created and form validation included-->
+                              <br><!--creating a new line for text or anything-->
+                              <button type="submit" name="donate-btn" value= "TestInput" onClick="ValidationCheck(this.form)" class="donate-btn"> DONATE </button><!-- donate button created and form validation included-->
+                        </form>
+                    </div>
+                </div>
+                <div class="donate-column"><!--This div is used to structure and divide the section content in column format and class to be used for the css-->
+                    <div class="promise-cont"> <!--This div is used to structure and divide the section for the pledge content  and class to be used for the css-->
+                        <h2><STRONG>OUR PROMISE TO YOU</STRONG></h2><!--heading and strong used to make text bold-->
+                        <p>We pledge transparent and responsible use of your donations to directly empower girls and young women through education and mentorship in Africa. Your generosity fuels our mission, and we're committed to delivering tangible results, transforming lives, and shaping a brighter future together.</p><!--paragraph created-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stat-faq">
+            <div class="statf-row">
+                <div class="statf-column">
+                    <h1><strong> DONATIONS STATISTICS</strong></h1><!--heading and strong used to make text bold-->
+                    <table class="content-table"> <!--table being created and class to be used for styling-->
+                        <tbody><!--representing the body of the table-->
+                            <tr class="active-row"><!--representing the rows within the table-->
+                                <td class="headings"><strong> TOTAL AMOUNT OF DONATIONS:</strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td>£100000</td> <!--the table data being input into the table-->
+                                <td class="headings2"><strong> CHILDREN SPONSORED:</strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td>25000 </td><!--the table data being input into the table-->
+                            </tr>
+                            <tr><!--representing the rows within the table-->
+                                <td class="headings"><strong>TOTAL NUMBER OF DONORS: </strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td> 11000 </td><!--the table data being input into the table-->
+                                <td class="headings2"><strong> TOTAL TIME DONATED:</strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td> 2000000 hours</td><!--the table data being input into the table-->
+                            </tr>
+                            <tr class="active-row"><!--representing the rows within the table-->
+                                <td class="headings"><strong> NUMBER OF PLEDGES: </strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td> 3400 </td><!--the table data being input into the table-->
+                                <td class="headings2"><strong>TOTAL NUMBER OF VOLUNTEERS:</strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td>120 </td> <!--the table data being input into the table-->
+                            </tr>
+                            <tr><!--representing the rows within the table-->
+                                <td class="headings"><strong> TOTAL NUMBER OF PLEDGES FULFILLED: </strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td> 2500</td><!--the table data being input into the table-->
+                                <td class="headings2"><strong>TOTAL NUMBER OF MENTORS:</strong></td><!--the table data being input into the table- made bold as this is a heading-->
+                                <td> 130 </td><!--the table data being input into the table-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="statf-column">
+                    <h1><strong> DONATION FAQS</strong></h1>
+                    <ul class="statf-colap"><!--Collapsable menu etc for volunteer section-->
+                        <li>
+                           <input type="radio" name="accordion" id="first" checked> <!--checked so that the first one is seen/left open-->
+                           <label for="first">Are donations tax-deductible? </label>
+                           <div class="content">
+                              <p>Yes, donations to Education For Her are tax-deductible, allowing you to support our mission while also receiving tax benefits for your generosity.</p>
+                           </div>
+                        </li>
+                        <li>
+                           <input type="radio" name="accordion" id="second"><!--Changing the ID for all-->
+                           <label for="second">How can I get a receipt?</label>
+                           <div class="content">
+                              <p>You can obtain a receipt from EducationForHer by simply providing your email address during the donation process. Shortly after, a confirmation email containing your receipt will be sent to you.</p>
+                           </div>
+                        </li>
+                        <li>
+                           <input type="radio" name="accordion" id="third">
+                           <label for="third">Can I donate Items?</label>
+                           <div class="content">
+                              <p>Currently, EducationForHer primarily accepts monetary donations to bolster our programs and initiatives. However, if you wish to contribute specific items or resources, feel free to reach out to us directly to explore potential avenues for support.                              </p>
+                           </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+         <!--Footer Section Content-->
+
+        </section>
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-info">
+                    <img src="logo2.png" alt="logo" class="logo"><!--logo-->
+                <p>Copyright &#169; 2024 EducationForHer. All rights reserved.<!--&#169; is the copyright icon-->
+                   <br>Registered by Charity Organization &#174;.</br> Designed by Tadisa. <!--&#174; is the registered icon-->
+                </div>
+                <div class="footer-column"><!--main footer content-->
+                    <h1>Important Links</h1>
+                    <ul>
+                        <li><a href="Get Involved.html">Mentorship</a></li> <!--meaning the specified location, in this case no location specified-->
+                        <li><a href="Get Involved.html">Volunteer</a></li>
+                        <li><a href="Donate.html">Donate</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h1>Contact Us</h1>
+                    <ul>
+                        <li><a href="#">Organization Location</a></li>
+                        <li><a href="#">Contact Details</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook circle"></i></a> <!--logo icons-->
+                    <a href="#"><i class="bx bxl-twitter"></i></a><!--logo icons-->
+                    <a href="#"><i class="bx bxl-instagram"></i></a><!--logo icons-->
+            </div>
+        </section>
+            <!--Javascripting- the form validation code-->
+            <script>
+                function ValidationCheck(form) {//To be called
+                if (form.MoneyInput.value == "")//if called and is equal to nothing execute message below
+                alert("Please type in your Donation amount.");//Condition statement
+                }
+            </script>
+        
+    </body>
+
+</htmL>
+       

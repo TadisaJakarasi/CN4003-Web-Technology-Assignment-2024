@@ -1,0 +1,162 @@
+
+*{padding:0;/*to remove autoset padding*/
+  margin: 0; /*to remove autoset margin*/
+  font-family: "Nunito", sans-serif;}/*stating the name of the font being used}
+
+
+                        /*Header Content Section*/
+
+.header{width:100%;/*sets the width that the header can be displayed at which in this case is full screen width*/
+        background-color: #a6d0e4; /*background color for the header*/} /*header class called dealing with the header and navigational aid*/
+
+.logo {width: 20%; /*sets the width that the logo can be displayed at 20% of the header container width*/} /*logo class dealing with the logo*/
+
+.navbar{display:flex; /*this allows for the navigation to have a flexible layout in terms of it's positioning*/
+        margin-right:20px;
+        min-width: 5vw; /*min width*/
+        justify-content:space-between; /*aligining the navigation list horizontally with space in between the list elements*/
+        align-items:center; /*aligning the navigation elements to the center*/} /*navbarclass dealing with the navigations*/
+
+.navbar ul li{list-style:none; /*removes the default bullet points for an unordered list*/
+              display:inline-block; /*displaying in a box in block like shape that wraps the given text*/
+              padding: 8px 10px; /*the padding creates space around the the text in this case at the top bottom and left right*/
+              position:relative;/*the position of the element relative to that of the others around it*/} /*dealing with the design of the list elements specifically*/
+
+.navbar ul li a{color:black; /*changes the colr of the text the font*/
+                text-decoration: none; /*removes the underline decorative effect on the text showcasing that it's a link*/
+                font-size: 15px;} /*dealing with the design of the link part of the list element*/
+
+.navbar ul li::after{ content:""; /*replaces the content inside the content for the transition element with nothing*/
+                     width:0%;/*sets the width that the transition element can be displayed at which is 0% of the list element width-So that line is only seen after transition*/
+                     height:2px; /*height of the transition element being used*/
+                     background: #5C6C7C;/*the colour of the transition being shown*/
+                     display: block;/*displaying in a box in block like shape that wraps the given text or content*/
+                     transition:0.5s; /*the time that the transition will take*/}/* ::after allowing for certain content to be put in before the transition element-Creating transition so that the style is hidden*/
+
+.navbar ul li:hover::after{width:100%;/*allows line transition to be seen at 100 percent width of the list element width*/} /* ::after allowing for certain content to be put in before the transition element*/
+
+.button-nav{background-color:#5C747D;/*colour of the background*/
+            border:none; /*no border*/
+            width:90px;/*width of the button*/
+            border-radius: 10px; /*adding roundness to the border corners*/
+            padding: 10px; /*creating space around the text in the button*/
+            font-weight: bolder; /*how the font appears  in this case bold*/}
+
+.button-nav a{color: black; /*colour of the font*/
+              text-decoration: none; /*removes the default link underline*/}
+
+.button-nav a:hover{background-color:#5C6C7C; /*colour of the background*/} /*hover effect for donate button*/
+
+.image-text img{width:100%;/*width of the image*/
+                min-height:50vh;
+                max-height:60vh;
+                object-fit: cover; /*allowing for the image to cover the whole section in a fitting manner without looking stretched*/
+                filter: brightness(50%);} /*Reduce brightness of image*/
+
+.image-text h1{width:100%; /*width of the heading on the image*/
+            position:absolute; /*exact positioning so element not affected by other elements*/
+            top:50%;
+            left:50%;
+            font-weight: bolder; /*how the font appears  in this case bold*/
+            color:#a6d0e4; /*colour of the font*/
+            transform: translate(-50%,50%); /*moving element along the x-axis to the left and along the y-axis downwards*/
+            text-align:center; /*aligning text to the center*/
+            border:1px solid #5C6C7C; /*border width - border size- border colour*/}
+
+                       /* Main Content Section*/
+
+                       /*About us*/
+
+.about-column{width:70%;/*takes up 70percent of the screen*/
+              margin-top:2%;/*adds space outside of the element on the top side*/
+             text-align:center;/*align text to the center-added*/
+             padding: 30px; /*Causes there to be space from the top*/
+             background-color: #191b1b3a;
+             margin-bottom: 5%; /*adds space outside of the element on the bottom side*/
+             margin-left:5%;/*adds space outside of the element on the left side*/}
+
+.about-us h1{text-align: center; /*align text to the center-added*/
+             padding: 10px; /*creating space all around the text in the button*/
+             line-height:22px;/*adds spacing between the lines of text*/ }   /*styling for the heading*/       
+
+.about-us p{padding: 20px;/*creating space all around the text in the button*/
+            text-align:center;  /*align text to the center-added*/
+            font-weight: 300;/*Reduces colour of font, making it less dark*/}
+
+.img-2{float:left; /*moves element to the far left*/
+        width:30%;/*width of the image*/
+        filter: brightness(50%); /*Reduce brightness of image*/}
+
+.about-row{display:flex;/*this allows for the elements in the about section to have a flexible layout in terms their  positioning*/
+           margin-top:5%; /*adds space outside of the element on the top side*/
+           justify-content: space-between; /*aligining the about section content horizontally with space in between*/}
+
+
+.about-column:hover{box-shadow:0px 0px 15px 0px #5C747D; /*shadow around the box on the top left bottom right side- colour of shadow*/} /*hover effect*/
+
+/*Get Involved*/
+
+.get-column{
+    width:70%;/*takes up 70percent of the screen*/
+    margin-top:5%;
+    text-align:center;/*align text to the center-added*/
+    padding: 30px; /*Causes there to be space from the top*/
+    background-color: #191b1b3a;
+    margin-bottom: 5%;
+    margin-left:10%;}
+
+.get-involved h1{text-align: center;
+       padding: 10px;
+       line-height:22px;}          
+
+.get-involved p{padding: 15px;
+               font-weight: 300;/*Reduces colour of font, making it less dark*/}
+
+.img-3{float:right;
+  width:30%;
+  filter: brightness(50%);}
+
+.get-row{display:flex;
+margin-top:5%;
+justify-content: space-between;}/*Creates a row for the content*/
+
+.get-column:hover{box-shadow:0px 0px 15px 0px #5C747D;}
+
+               /*Footer Section Content*/
+        
+.footer{background-color:#a6d0e4;
+        width: 100%; /*So that it doesn't fill the whole page*/
+        padding:30px 0;}
+
+.footer ul{list-style-type: none;}
+
+.footer-row{display:flex;
+            margin-top:2%;
+            justify-content: space-between;}
+
+.footer-info{margin-left: 2%;}
+                
+.footer-column{width:70%;
+               text-align: center;
+               padding: 0px 5px;
+               justify-content: center;}         
+   
+.social-icons {display:flex;
+               position:relative;
+               margin-left:60%;}/*move icons to the center of page*/          
+
+.social-icons a{/*link styling*/
+            text-decoration: none;
+            padding:  8px;
+            color: black;
+            margin: 10px;
+            border-radius: 50%;}
+        
+.social-icons a:hover{/*hove effect on background for icons*/
+                background-color: #111;
+                transition: 0.5s;
+            }
+
+.social-icons a:hover i{ /*hover effect on the icons*/
+                color: white;
+                transition: 0.5s;}    

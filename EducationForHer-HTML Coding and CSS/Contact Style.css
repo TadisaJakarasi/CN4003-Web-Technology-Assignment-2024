@@ -1,0 +1,158 @@
+*{padding:0;
+  margin: 0; /*to remove autoset padding and margin*/
+  font-family: "Nunito", sans-serif;}
+
+
+                        /*Header Content Section*/
+
+.header{width:100%;
+        background-color: #a6d0e4;} 
+
+.logo {width: 20%;}
+
+.navbar{display:flex;
+        margin-right:20px;
+        min-width: 5vw; /*min width*/
+        justify-content:space-between;
+        align-items:center;} /*navigation section styling*/
+
+.navbar ul li{list-style:none;
+              display:inline-block;
+              padding: 8px 10px;
+              position:relative;}
+
+.navbar ul li a{color:black;
+                text-decoration: none;
+                font-size: 15px;}
+
+.navbar ul li::after{ content:"";
+                     width:0%;/*So that line is only seen after transition*/
+                     height:2px;
+                     background: #5C6C7C;
+                     display: block;/*Showcases the line on each block*/
+                     transition:0.5s;}/*Creating transition so that the style is hidden*/
+
+.navbar ul li:hover::after{width:100%;/*allows line transition to be seen at 100 percent width*/}
+
+.button-nav{background-color:#5C747D;
+            border:none;
+            width:90px;
+            border-radius: 10px;
+            padding: 10px;
+            /* margin-left:10px;# */
+            font-weight: bolder;}
+
+.button-nav a{color: black;
+              text-decoration: none;}
+.button-nav a:hover{background-color:#5C6C7C;} /*hover colour for donate button*/
+
+.image-text img{width:100%;
+                min-height:50vh;
+                max-height:60vh;
+                object-fit: cover;
+                filter: brightness(50%);} /*Reduce brightness of image*/
+
+.image-text h1{width:100%;
+            position:absolute;
+            top:50%;
+            left:50%;
+            font-weight: bolder;
+            color:#a6d0e4;
+            transform: translate(-50%,50%);
+            text-align:center;
+            border:1px solid #5C6C7C;}
+
+       /*Main Content*/
+
+
+
+.contact-outer{margin-bottom: 5%;/*spacing at bottom*/
+             width: 60%;
+             transform: translate(46%); /*positioning the outer part and the form*/
+             box-sizing: border-box; 
+             border: 2px solid #191B1B;
+             padding: 30px;
+             margin-top: 5%; /*spacing at top*/
+             border-radius: 15px;} /*this is designing the outer part of the contact form, and positioning the whole form*/
+
+.contact-row{display:flex;
+           /* margin-top:5%;*/
+            justify-content:space-between;}   
+
+.contact-col{padding:20px 10px;
+             margin-bottom:5%;}
+
+.contact-details .fa{color: #191B1B}
+.contact-details{transform: translate(50%);
+                 margin-top: 20%;/*space form top pushing it down to align with the form*/
+                  font-size: 17px;}
+
+.contact-col input, .contact-col textarea{width:100%; /*size of the input and textarea*/
+                                          padding:15px;
+                                          margin-bottom:17px;
+                                          outline: none;
+                                          border-radius: 15px;
+                                          border: 2px solid #191B1B;
+                                          box-sizing:border-box;}/*styling the input and text area of the contact form*/
+::placeholder{color: black; /*changes colour of placeholder input*/
+               opacity: 1; /*makes it look darker*/} /*using the placeholder selector (::)*/
+
+.contactsection h1{margin-top: 5%; /*outer space*/
+                   font-size: 30px; /*the size of the font*/
+                   transform: translate(13%)} /*moves the heading to the right on the x axis by 13% of the screen*/
+
+
+.contact-btn{display: inline-block; /*button css*/
+          text-decoration:none; /*removes link line under the written words*/
+          color: black; /*changes color of the font*/
+          border: 1px solid black; /*border design*/
+          padding: 12px 34px; /*internal spaces*/
+          font-size: 13px; /*the size of the font*/
+          background: #879099;
+          position: relative;
+          cursor:pointer; /*changes the cursor from mouse look to finger pointing look*/
+          border-radius: 15px; /*changes the shape of the border corners*/} 
+
+.contact-btn:hover{border: 1px solid #191B1B; /*border design*/
+                   background: #5C6C7C;/*changes background of the button when hovered on*/
+                   transition:1s;} /*hover effect on the button*/
+
+
+                   /*Footer Section Content*/
+        
+.footer{background-color:#a6d0e4;
+        width: 100%; /*So that it doesn't fill the whole page*/
+        padding:30px 0;}
+
+.footer ul{list-style-type: none;}
+
+.footer-row{display:flex;
+            margin-top:2%;
+            justify-content: space-between;}
+
+.footer-info{margin-left: 2%;}
+                
+.footer-column{width:70%;
+               text-align: center;
+               padding: 0px 5px;
+               justify-content: center;}         
+   
+.social-icons {display:flex;
+               position:relative;
+               margin-left:60%;}/*move icons to the center of page*/          
+
+.social-icons a{/*link styling*/
+            text-decoration: none;
+            padding:  8px;
+            color: black;
+            margin: 10px;
+            border-radius: 50%;}
+        
+.social-icons a:hover{/*hove effect on background for icons*/
+                background-color: #111;
+                transition: 0.5s;
+            }
+
+.social-icons a:hover i{ /*hover effect on the icons*/
+                color: white;
+                transition: 0.5s;}    

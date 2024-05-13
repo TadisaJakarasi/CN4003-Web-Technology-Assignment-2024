@@ -1,0 +1,337 @@
+*{padding:0;
+  margin: 0; /*to remove autoset padding and margin*/
+  font-family: "Nunito", sans-serif;}
+
+
+                        /*Header Content Section*/
+
+.header{width:100%;
+        background-color: #a6d0e4;} 
+
+.logo {width: 20%;}
+
+.navbar{display:flex;
+        margin-right:20px;
+        min-width: 5vw; /*min width*/
+        justify-content:space-between;
+        align-items:center;}
+
+.navbar ul li{list-style:none;
+              display:inline-block;
+              padding: 8px 10px;
+              position:relative;}
+
+.navbar ul li a{color:black;
+                text-decoration: none;
+                font-size: 15px;}
+
+.navbar ul li::after{ content:"";
+                     width:0%;/*So that line is only seen after transition*/
+                     height:2px;
+                     background: #5C6C7C;
+                     display: block;/*Showcases the line on each block*/
+                     transition:0.5s;}/*Creating transition so that the style is hidden*/
+
+.navbar ul li:hover::after{width:100%;/*allows line transition to be seen at 100 percent width*/}
+
+.button-nav{background-color:#5C747D;
+            border:none;
+            width:90px;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left:10px;
+            font-weight: bolder;}
+
+.button-nav a{color: black;
+              text-decoration: none;}
+.button-nav a:hover{background-color:#5C6C7C;} /*hover colour for donate button*/
+
+.image-text img{width:100%;
+                min-height:50vh;
+                max-height:60vh;
+                object-fit: cover;
+                filter: brightness(50%);} /*Reduce brightness of image*/
+
+.image-text h1{width:100%;
+            position:absolute;
+            top:50%;
+            left:50%;
+            font-weight: bolder;
+            color:#a6d0e4;
+            transform: translate(-50%,50%);
+            text-align:center;
+            border:1px solid #5C6C7C;}
+
+
+                 /*Main content*/
+
+.donate-row{display:flex;
+            justify-content:space-between;}
+
+
+.donate-column{flex-basis:20%;
+             padding: 20px 10px;}
+
+.donate-column h1{top: -45%;
+                  position: relative;
+                  font-size: 50px;
+                  color:#a6d0e4;}
+
+/*Donate form*/
+
+.donate-form {width:500px;
+    height: 300px;
+    padding:15px;
+    border: 1px solid #A3D3E3;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color:#A3D3E3;
+    top: -45%;
+    position: relative;} /*styling and design for the donate form*/
+
+.donate-form input {width:90px;
+    height: 0px;
+    padding:15px;
+    padding-left: 350px;/*moving the text to the end of box*/
+    border:0px transparent;
+    background-color:#A3D3E3;}/*styling and design for the input section of the donate form*/
+    
+
+
+.donate-btn{display: inline-block; /*button css*/
+          height: 40px;
+          width:470px;
+          margin-top: 2%;
+          font-size: 15px;
+          font-weight: 600;
+          padding-bottom: 4px;
+          color: black;
+          border: 1px solid #5C747D;
+          background: #5C747D;
+          position: relative;
+          text-align: center;
+          border-radius: 5px;
+          cursor:pointer;} /*styling and positioning for the donate buttons*/
+
+.donate-btn:hover{border: 1px solid #5C747D;
+                background: #bcd0da;
+                transition:1s;}/*hover effect when user clicks on the buttons*/
+
+.donate-btn a{text-decoration: none;
+              color: black;}/*removing the link underline and changing the colour of the link font*/
+
+.value{margin-top:3%;
+       margin-bottom: 2%;}/*styling for the money section and the positioning of the content*/
+
+.money1{border: 2px solid #5C747D;
+       border-radius: 7px;
+       font-weight: 600;
+       margin-left: 1%;
+       background-color: #5C747D;
+       padding-left:38px;
+       padding-right: 36px;
+       cursor: pointer;} /*creating boxes for the individual suggested amounts displayed*/
+
+.money2{border: 2px solid #5C747D;
+       border-radius: 7px;
+       font-weight: 600;
+       margin-right: 3%;
+       background-color:  #5C747D;
+       padding-left:36px;
+       padding-right: 38px;
+       cursor: pointer;}/*creating boxes for the individual suggested amounts displayed*/
+
+.money3{border: 2px solid #5C747D;
+       border-radius: 7px;
+       font-weight: 600;
+       background-color:  #5C747D;
+       padding-left:33px;
+       padding-right: 33px;
+       cursor: pointer;}/*creating boxes for the individual suggested amounts displayed*/
+
+.money4{border: 2px solid #5C747D;
+        border-radius: 7px;
+        font-weight: 600;
+        background-color:  #5C747D;
+        padding-left:33px;
+        padding-right: 33px;
+        cursor: pointer;}/*creating boxes for the individual suggested amounts displayed*/
+
+hr.line {border: 1px solid black;} /*line CSS*/
+
+.time{border: 2px solid #5C6C7C;
+       margin-left:1%;
+       border-radius: 7px;
+       font-weight: 600;
+       background-color: #5C6C7C;
+       padding-left:70px;
+       padding-right: 70px;
+       cursor: pointer;}/*creating boxes for the individual time stamps displayed*/
+
+.time1{border: 2px solid #5C6C7C;
+    margin-left:3%;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: #5C6C7C;
+    padding-left:70px;
+    padding-right: 70px;
+    cursor: pointer;}/*creating boxes for the individual time stamps displayed*/
+
+/*Promise note*/
+
+.promise-cont{box-sizing: border-box;
+              border: 1px;
+              border-radius: 8px;
+              width: 500px;
+              height: 300px;
+              background: #5C747D;
+              top: -16%;
+              position: relative;} /*styling for the box and outer part of the pledge content*/
+
+.promise-cont h2{margin-top: 2%;
+                 padding-top: 2%;
+                 margin-bottom: 10%;
+                 text-align: center;}/*header styling for the pledge header*/
+
+.promise-cont p{text-align: center;}/*paragraph styling for the pledge content*/
+
+/*Statistics and FAQ section*/
+.content-table {
+    border-collapse: collapse; /*reduces the amount of space within your cells-tighter*/
+    margin: 25px 0; /*ensures nice space between your content at the top and bottom*/
+    font-size: 0.9em; /*font made smaller, and does not take up too much screen good for mobile use*/
+    min-width: 550px; /*ensure table looks nice and big no matter content-so since minimum meaning it will expand when needed*/
+    border-radius: 5px 5px 0 0; /*makes top left and top right corners to be rounded*/
+    overflow: hidden; /*ensures that border radius  correctlyand is displayed nicely
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /*bottom and right have the boxshadow effect*/
+}
+
+.content-table .headings{ /*table head css*/
+    background-color: #A3D3E3;
+    color: black;
+    text-align: left;/*making sure content and columns are aligned nicely- th columns line properly with table content*/
+    font-weight: bold; /*ensures on all browsers heading comes bold*/
+}
+
+.content-table .headings2{ /*table head css*/
+    background-color: #A3D3E3;
+    color: black;
+    text-align: left;/*making sure content and columns are aligned nicely- th columns line properly with table content*/
+    font-weight: bold; /*ensures on all browsers heading comes bold*/
+}
+
+.content-table td { 
+    padding: 12px 15px;
+}/*table content or table body*/
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd; /*adds a nice straight line at the bottom*/
+} /*targeting every single table row inside the table body*/
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /*really light grey*/
+} /*nth-of-type (even) targeting every single second row(even number) with this CSS*/
+
+.content-table tbody tr {
+    border-bottom: 2px solid #A3D3E3;
+    border-right: 2px solid #A3D3E3;
+    border-top: 2px solid #A3D3E3; 
+} /*targeting the specific border sides*/
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+} /* displaying a partocular row a being active as if the person is logged into their own account*/
+
+.stat-faq{margin-left:10%;
+         }
+
+.statf-row{display:flex;
+           justify-content:space-between;} 
+
+.statf-column h1{text-align:center;
+                 font-size: 20px;
+                 margin-bottom:10%;}
+
+.statf-column{flex-basis:20%;
+              margin-bottom: 10%;
+              padding: 20px 10px;
+              margin-right: 10%;}
+/*collapsible*/
+.statf-colap{margin:auto;
+        min-width: 400px;}/*depending on the size you want and where you want it fixated*/
+
+.statf-colap li{list-style: none;
+           width: 100%;
+           margin: 20px;
+           padding: 0px;
+           border-radius:8px;
+           background:#c8cace;
+           box-shadow: 6px 6px 10px -1px #5C747D}
+        
+.statf-colap li label{display:flex;
+                 align-items: center;
+                 padding: 10px;
+                 font-size: 18px;
+                 font-weight: 500;
+                 cursor: pointer;}
+
+label::before{content: '+'; /*the plus icon*/
+           margin-right: 10px;
+           font-size: 15px;
+           font-weight: 600;}
+
+input[type="radio"]{display:none;} /*hides the radio button*/
+
+
+.statf-colap .content{color: black ;
+                padding: 0 10px;
+                line-height: 26px;
+                max-height: 0;
+                overflow: hidden; /*causes all of them to be hidden(the content)*/         
+                transition: max-height 0.5s, padding 0.5s;/*it'll take 0.5s to change the padding and max height*/}
+
+.statf-colap input[type="radio"]:checked + label + .content{ max-height:300px;
+                    padding: 10px 10px 20px;}
+
+.statf-colap input[type="radio"]:checked + label::before{content: '-';}
+/*so that when content is open the icon changes to indicate that*/
+
+/*Footer Section Content*/
+        
+.footer{background-color:#a6d0e4;
+    width: 100%; /*So that it doesn't fill the whole page*/
+    padding:30px 0;}
+
+.footer ul{list-style-type: none;}
+
+.footer-row{display:flex;
+        margin-top:2%;
+        justify-content: space-between;}
+
+.footer-info{margin-left: 2%;}
+            
+.footer-column{width:70%;
+           text-align: center;
+           padding: 0px 5px;
+           justify-content: center;}         
+
+.social-icons {display:flex;
+           position:relative;
+           margin-left:60%;}/*move icons to the center of page*/          
+
+.social-icons a{/*link styling*/
+        text-decoration: none;
+        padding:  8px;
+        color: black;
+        margin: 10px;
+        border-radius: 50%;}
+    
+.social-icons a:hover{/*hove effect on background for icons*/
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+.social-icons a:hover i{ /*hover effect on the icons*/
+            color: white;
+            transition: 0.5s;}    

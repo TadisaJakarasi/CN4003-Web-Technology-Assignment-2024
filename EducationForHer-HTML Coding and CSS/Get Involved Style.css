@@ -1,0 +1,389 @@
+*{padding:0;
+  margin: 0; /*to remove autoset padding and margin*/
+  font-family: "Nunito", sans-serif;}
+
+
+                        /*Header Content Section*/
+
+.header{width:100%;
+        background-color: #a6d0e4;} 
+
+.logo {width: 20%;}
+
+.navbar{display:flex;
+         margin-right:20px;
+        min-width: 5vw; /*min width*/
+        justify-content:space-between;
+        align-items:center;}
+
+.navbar ul li{list-style:none;
+              display:inline-block;
+              padding: 8px 10px;
+              position:relative;}
+
+.navbar ul li a{color:black;
+                text-decoration: none;
+                font-size: 15px;}
+
+.navbar ul li::after{ content:"";
+                     width:0%;/*So that line is only seen after transition*/
+                     height:2px;
+                     background: #5C6C7C;
+                     display: block;/*Showcases the line on each block*/
+                     transition:0.5s;}/*Creating transition so that the style is hidden*/
+
+.navbar ul li:hover::after{width:100%;/*allows line transition to be seen at 100 percent width*/}
+
+.button-nav{background-color:#5C747D;
+            border:none;
+            width:90px;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left:10px;
+            font-weight: bolder;}
+
+.button-nav a{color: black;
+              text-decoration: none;}
+.button-nav a:hover{background-color:#5C6C7C;} /*hover colour for donate button*/
+
+.image-text img{width:100%;
+                min-height:50vh;
+                max-height:60vh;
+                object-fit: cover;
+                filter: brightness(50%);} /*Reduce brightness of image*/
+
+.image-text h1{width:100%;
+            position:absolute;
+            top:50%;
+            left:50%;
+            font-weight: bolder;
+            color:#a6d0e4;
+            transform: translate(-50%,50%);
+            text-align:center;
+            border:1px solid #5C6C7C;}
+
+
+            /*Main Section Content*/
+
+/*Volunteer Content*/
+
+
+.vol-row1{display:flex;
+    margin-top:5%;
+    justify-content:space-between;}   
+
+.vol-column{flex-basis:31%;
+    padding:20px 10px;
+    margin-bottom:5%;}
+
+.vol-content h1{margin-left:7%;
+                margin-top: 5%;
+                font-size: 30px;}
+.vol-colap h2{text-align:center;
+             font-size:20px;}
+.vol-colap{margin:auto;
+        width: 300px;}/*depending on the size you want and where you want it fixated*/
+
+.vol-colap li{list-style: none;
+           width: 100%;
+           margin: 20px;
+           padding: 0px;
+           border-radius:8px;
+           background:#c8cace;
+           box-shadow: 6px 6px 10px -1px #5C747D}
+        
+.vol-colap li label{display:flex;
+                 align-items: center;
+                 padding: 10px;
+                 font-size: 18px;
+                 font-weight: 500;
+                 cursor: pointer;}
+
+label::before{content: '+'; /*the plus icon*/
+           margin-right: 10px;
+           font-size: 15px;
+           font-weight: 600;} /*before element adding content before another elements content in this case before the label*/
+
+input[type="radio"]{display:none;} /*hides the radio button*/
+
+
+.vol-colap .content{color: black ;
+                padding: 0 10px;
+                line-height: 26px;
+                max-height: 0;/*maximum heigt for the collapsible container before "checked"*/
+                overflow: hidden; /*causes all of them to be hidden(the content)*/         
+                transition: max-height 0.5s, padding 0.5s;/*it'll take 0.5s to change the padding and max height*/} /*styling for two classes for the list items in the collapsible and the pargraph*/
+
+.vol-colap input[type="radio"]:checked + label + .content{ max-height:300px; /*maximum heigt for the collapsible container once opened "checked"*/
+                    padding: 10px 10px 20px;} /*styling for the input part of the collaspsible showcasing the radio button which is hidden*/ /*"+" plus sign representing what follows immediately after the input(label) has been clicked on*/
+
+.vol-colap input[type="radio"]:checked + label::before{content: '-';}
+/*so that when content is open the icon changes to indicate that*/
+
+.vol-africa{text-align:center;}
+
+.vol-africa h3{margin-bottom: 2%;}
+
+.vol-home{text-align:center;}
+
+.vol-home h3{margin-bottom: 2%;
+             margin-top:5%;}
+
+.vol-quote{box-sizing: border-box;
+           border:1px dotted #a6d0e4;
+           padding: 10px;
+           font-weight: 300;
+           background:#191b1b3a;
+           font-size: 20px;} /*styling for the quote used in volunteer section*/
+
+.vol-btn{margin-top: 70%;
+    margin-left:23%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #a6d0e4;
+    position: relative;
+    cursor: pointer;} /*Volunteer button*/
+
+.vol-btn:hover{border: 1px solid black;
+    background: #bcd0da;
+    transition: 1s;} /*hover effect when volunteer button is clicked*/
+
+.vol-cta{text-align:center;
+         margin-top: 26%;
+         margin-left:5%;}
+
+.line {width:70%;
+       margin-left: 15%;} /*styling for the line*/
+
+
+              /*Mentorship Content*/
+
+.mentor-row{display:flex;
+            margin-top:5%; /*top space outside of the row container*/
+            justify-content:space-between; /*aligning the content horizontally with space in between*/}   
+
+.mentor-column{flex-basis:31%;
+              padding:20px 10px;} /*tyling to create column format for the mentorship content*/
+
+.mentor-content h1{margin-left:7%;
+                margin-top: 5%;
+                font-size: 30px;}
+.mentorwhy-colap h2{text-align:center;
+             font-size:20px;}
+
+.mentorwhy-colap{margin:auto;
+        width: 300px;}/*depending on the size you want and where you want it fixated*/
+
+.mentorwhy-colap li{list-style: none;
+           width: 100%;
+           margin: 20px;
+           padding: 0px;
+           border-radius:8px;
+           background:#c8cace;
+           box-shadow: 6px 6px 10px -1px #5C747D}/*creates box around all of the content*/
+        
+.mentorwhy-colap li label{display:flex;
+                 align-items: center;
+                 padding: 10px;
+                 font-size: 18px;
+                 font-weight: 500;
+                 cursor: pointer;} /*separates each of the list elements creating individual box like shapes for each*/
+
+label::before{content: '+'; /*the plus icon*/
+           margin-right: 10px;
+           font-size: 15px;
+           font-weight: 600;}
+
+input[type="radio"]{display:none;} /*hides the radio button*/
+
+
+.mentorwhy-colap .content{color: black ;
+                padding: 0 10px;
+                line-height: 26px;
+                max-height: 0;
+                overflow: hidden; /*causes all of them to be hidden(the content)*/         
+                transition: max-height 0.5s, padding 0.5s;/*it'll take 0.5s to change the padding and max height*/} /*hides the content showcasing label only*/
+
+.mentorwhy-colap input[type="radio"]:checked + label + .content{ max-height:300px;
+                    padding: 10px 10px 20px;}
+
+.mentorwhy-colap input[type="radio"]:checked + label::before{content: '-';}/*so that when content is open the icon changes to indicate that*/
+
+/*Mentorship Requirements*/
+
+.mentor-requirements{padding: 60px;}
+
+.mentor-requirements h1{text-align:center;
+                        font-size:30px;
+                        padding: 10px;}
+
+.mentor-requirements p{font-size:16px;
+                       padding-top:80px;}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color:#c8cace ;
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #c8cace ;
+  border-radius: 10%;
+  cursor:pointer; /*when mouse hovers over flip card the mouse will change to a cursor*/
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /*makes sure that when flipped the back side content is made visible and shown*/
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /*rotate vertically on the y-axis by 180 degrees*/
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;/*width of cards 100% of the given container*/
+  height: 100%; /*height of cards 100% of the given container*/
+  backface-visibility: hidden; /*so that back content is not still visible when flipping takes place*/
+} /*aligning the front card with the back card*/
+
+/* Style the front side*/
+.flip-card-front {
+  background-color:#c8cace  ;
+  color: black;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #c8cace ;
+  border-radius: 10%;
+  text-align:center;
+  font-size:22px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color:#c8cace  ;
+  color: black;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #c8cace ;
+  border-radius: 10%;
+  transform: rotateY(180deg);
+}
+
+/*Mentorship collapsible 2*/
+
+.mentor-content h1{margin-left:7%;
+                   margin-top: 5%;
+                   font-size: 30px;}
+
+.mentoroffer-colap h2{text-align:center;
+              font-size:20px;}
+
+.mentoroffer-colap{margin:auto;
+           width: 300px;}/*depending on the size you want and where you want it fixated*/
+
+.mentoroffer-colap li{list-style: none;
+                      width: 100%;
+                      margin: 20px;
+                      padding: 0px;
+                      border-radius:8px;
+                      background:#c8cace;
+                      box-shadow: 6px 6px 10px -1px #5C747D}
+
+.mentoroffer-colap li label{display:flex;
+                            align-items: center;
+                            padding: 10px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            cursor: pointer;}
+
+label::before{content: '+'; /*the plus icon*/
+margin-right: 10px;
+font-size: 15px;
+font-weight: 600;}
+
+input[type="radio"]{display:none;} /*hides the radio button*/
+
+
+.mentoroffer-colap .content{color: black ;
+                            padding: 0 10px;
+                            line-height: 26px;
+                            max-height: 0;
+                            overflow: hidden; /*causes all of them to be hidden(the content)*/         
+                            transition: max-height 0.5s, padding 0.5s;/*it'll take 0.5s to change the padding and max height*/}
+
+.mentoroffer-colap input[type="radio"]:checked + label + .content{ max-height:300px;padding: 10px 10px 20px;}
+
+.mentoroffer-colap input[type="radio"]:checked + label::before{content: '-';}
+/*so that when content is open the icon changes to indicate that*/
+
+/*Mentorship apply button and call to action*/
+
+.apply-btn{/*display: inline-block;*/
+           margin-left: 44.5%;
+           position: absolute;
+           text-decoration: none;
+           color: black;
+           border: 1px solid white;
+           padding: 12px 34px;
+           font-size: 13px;
+           background: #a6d0e4;
+           position: relative;
+           cursor: pointer;} /*Apply Now button*/
+
+.apply-btn:hover{border: 1px solid black;
+                 background: #bcd0da;
+                 transition: 1s;}   /*apply now buttone hover effect*/
+
+.apply-cta{text-align:center;
+           margin-top: 4%;
+           margin-bottom: 5%;}
+/*Footer Section Content*/
+        
+.footer{background-color:#a6d0e4;
+  width: 100%; /*So that it doesn't fill the whole page*/
+  padding:30px 0;}
+
+.footer ul{list-style-type: none;}
+
+.footer-row{display:flex;
+      margin-top:2%;
+      justify-content: space-between;}
+
+.footer-info{margin-left: 2%;}
+          
+.footer-column{width:70%;
+         text-align: center;
+         padding: 0px 5px;
+         justify-content: center;}         
+
+.social-icons {display:flex;
+         position:relative;
+         margin-left:60%;}/*move icons to the center of page*/          
+
+.social-icons a{/*link styling*/
+      text-decoration: none;
+      padding:  8px;
+      color: black;
+      margin: 10px;
+      border-radius: 50%;}
+  
+.social-icons a:hover{/*hove effect on background for icons*/
+          background-color: #111;
+          transition: 0.5s;
+      }
+
+.social-icons a:hover i{ /*hover effect on the icons*/
+          color: white;
+          transition: 0.5s;}    

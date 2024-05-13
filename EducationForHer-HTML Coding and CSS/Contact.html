@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <title>Contact </title>
+        <link rel="stylesheet" href="Contact Style.css" /> <!--Linking the CSS for this page to this html-->
+        <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> <!--Box icons link-->
+        <!-- Load search icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> <!--font-->
+    </head>
+    <body>
+        <section class="header"> <!--This contains the logo and navigational aid-->
+            <nav><!--Contains navigational bar and nav CSS class to be called-->
+                <div class="navbar">
+                    <a href="Homepage.html"><img src="logo2.png" class="logo"></a><!--logo-->
+                    <ul> <!--Unordered list used-->
+                        <li><a href="About Us.html">About Us</a></li>
+                        <li><a href="Get Involved.html">Get Involved</a></li>
+                        <li><a href="Testimonials.html">Testimonials</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <button class="button-nav">
+                            <a href="Donate.html">DONATE</a><!--Donate button and link to page-->
+                        </button>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <div class="image-text">
+            <img src="Contact Image 1.jpg">
+            <h1> CONTACT </h1>
+        </div>
+
+        <!--Main Content -->
+        <section class="contactsection"> <!--contact form-->
+            <h1>Get in touch:</h1>
+            <div class="contact-row"><!--aligning the items into a single row-->
+                <div class="contact-col"> <!--Column-->
+                    <div class="contact-details">
+                        <div>
+                            <i class="fa fa-home"></i> <!--the icons-->
+                            <span> <!--wrap the text allowing for automatic new line to be created-->
+                              <h5>14 Christchurch Ave, Strathaven</h5>
+                              <P>Harare, Zimbabwe</p>
+                            </span>
+                          </div>
+                          &nbsp; <!--Add space in between the divs-->
+                          <div>
+                            <i class="fa fa-phone"></i> <!--the icons-->
+                            <span><!--wrap the text allowing for automatic new line to be created-->
+                              <h5>+263 1234 5678 </h5>
+                              <P>Office hours:<br><!--to move to next line--> Monday to Friday, 8am to 5pm</p>
+                            </span>
+                          </div>
+                          &nbsp; <!--Add space in between the divs-->
+                          <div>
+                            <i class="fa fa-envelope-o"></i> <!--Nb to link the icon link thing-->
+                            <span><!--wrap the text allowing for automatic new line to be created-->
+                              <h5>info@education4her.com</h5>
+                              <P>Email us your query</p>
+                            </span>
+                          </div>
+                    </div>
+                </div>
+                <div class="contact-col"><!--Column for the contact us form section-->
+                    <div class="contact-outer"> <!--The outer box area of the form--> 
+
+                        <form action=""> <!--Form for the contact us page-->
+                          <input type="text" name="NameInput" placeholder="Enter your name"><!--Name to be input-->
+                          <input type="text" name="SurnameInput" placeholder="Enter your surname"> <!--Surname to be input-->
+                          <input type="email" name="EmailInput" placeholder="Enter your email address"><!--Email to be input-->
+                          <textarea rows="6"name="MessageInput" :placeholder="Message" placeholder="Type in your message"></textarea> <!--Message to be input-->
+                          <button type="submit" name="contact-btn" value= "TestInput" onClick="ValidationCheck(this.form)" class="contact-btn">Send Message</button> <!--Submit button and if clicked on the form validation check process will be called-->
+                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer Section Content-->
+
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-info">
+                    <img src="logo2.png" alt="logo" class="logo"><!--logo-->
+                <p>Copyright &#169; 2024 EducationForHer. All rights reserved.<!--&#169; is the copyright icon-->
+                   <br>Registered by Charity Organization &#174;.</br> Designed by Tadisa. <!--&#174; is the registered icon-->
+                </div>
+                <div class="footer-column"><!--main footer content-->
+                    <h1>Important Links</h1>
+                    <ul>
+                        <li><a href="Get Involved.html">Mentorship</a></li> 
+                        <li><a href="Get Involved.html">Volunteer</a></li>
+                        <li><a href="Donate.html">Donate</a></li>
+                        <li><a href="About Us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h1>Contact Us</h1>
+                    <ul>
+                        <li><a href="#">Organization Location</a></li> <!--Hashtag used because when you press on the link it remains on same page-->
+                        <li><a href="#">Contact Details</a></li><!--Hashtag used because when you press on the link it remains on same page-->
+                    </ul>
+                </div>
+            </div>
+            <div class="social-icons"> <!--Class for social icons for it's designs-->
+                <a href="#"><i class="bx bxl-facebook circle"></i></a> <!--logo icons-->
+                    <a href="#"><i class="bx bxl-twitter"></i></a><!--logo icons-->
+                    <a href="#"><i class="bx bxl-instagram"></i></a><!--logo icons-->
+            </div>
+        </section>
+        <!--Javascripting- the form validation code-->
+        <script>
+            function ValidationCheck(form) {//To be called
+            if (form.NameInput.value == "")//if called and is equal to nothing execute message below
+            alert("Please type in your Name.") //Condition statement
+            if (form.SurnameInput.value == "")//if called and is equal to nothing execute message below
+            alert("Please type in your Surname.") //Condition statement
+            if (form.MessageInput.value == "")//if called and is equal to nothing excute message below
+            alert("Please type in your Message.") //Condition statement
+            if (form.EmailInput.value == "" || form.EmailInput.value.indexOf('@') == -1) //two if conditions, using the "OR OPERATOR"
+            alert("Please put a valid Email"); //Condition statement
+            }
+        </script>
+    </body>
+</htmL>
+   
+          
+
+
+

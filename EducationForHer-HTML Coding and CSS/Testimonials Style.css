@@ -1,0 +1,201 @@
+*{padding:0;
+    margin: 0; /*to remove autoset padding and margin*/
+    font-family: "Nunito", sans-serif;}
+
+
+                        /*Header Content Section*/
+
+.header{width:100%;
+        background-color: #a6d0e4;} 
+
+.logo {width: 20%;}
+
+.navbar{display:flex;
+        margin-right:20px;
+        min-width: 5vw; /*min width*/
+        justify-content:space-between;
+        align-items:center;}
+
+.navbar ul li{list-style:none;
+              display:inline-block;
+              padding: 8px 10px;
+              position:relative;}
+
+.navbar ul li a{color:black;
+                text-decoration: none;
+                font-size: 15px;}
+
+.navbar ul li::after{ content:"";
+                     width:0%;/*So that line is only seen after transition*/
+                     height:2px;
+                     background: #5C6C7C;
+                     display: block;/*Showcases the line on each block*/
+                     transition:0.5s;}/*Creating transition so that the style is hidden*/
+
+.navbar ul li:hover::after{width:100%;/*allows line transition to be seen at 100 percent width*/}
+
+.button-nav{background-color:#5C747D;
+            border:none;
+            width:90px;
+            border-radius: 10px;
+            padding: 10px; /*the padding creates space around the the text in this case at the top bottom and left right*/
+            font-weight: bolder;}
+
+.button-nav a{color: black;
+              text-decoration: none;}
+.button-nav a:hover{background-color:#5C6C7C;} /*hover colour for donate button*/
+
+.image-text img{width:100%; /*width size that the image can take of it's container*/
+                min-height:50vh; /*minimum height of the screen that the image can take up*/
+                max-height:60vh;/*maximum height of the screen that the image can take up*/
+                object-fit: cover;/*allowing for the image to fit the given space without looking stretched*/
+                filter: brightness(50%);} /*Reduce brightness of image*/
+
+.image-text h1{width:100%;
+            position:absolute;
+            top:50%;
+            left:50%;
+            font-weight: bolder;
+            color:#a6d0e4;
+            transform: translate(-50%,50%);
+            text-align:center;
+            border:1px solid #5C6C7C;}
+
+              /*Main Testimonials Content Section*/
+
+.user-img{position: absolute;
+          top:0;
+          right:0;
+          height:100%}
+
+.user-img img{height: 100%;
+              border-radius: 10px;} /*reduces the image sizes*/
+
+.user-text{background:#5C6C7C;
+           width: 520px;
+            height:270px;
+            position:absolute;
+            left:1.6%;
+            top:50%;
+            transform: translateY(-50%);
+            border-top-left-radius: 10px;
+            color: black;
+            padding:45px;
+            box-sizing:border-box;} /*styling  and postioning for the text being shown for the testimonial*/
+
+.user-text p{ font-size: 16px;} /*paragraph styling for the testimonial text*/
+
+.user-text h3{margin:35px 0 5px;
+              color:black;} /*styling and positioning for the testimonial review names*/
+
+.slide-row{display: flex;
+           width: 3200px;
+           transition: 0.5s;}/*styling and positioning to create row for the content under this class*/
+
+.slide-col{width: 800px;
+            height: 400px;
+            position: relative;}/*styling and positioning to create column format for the content under this class*/
+
+
+.container{width: 800px;
+           height: 400px;
+           position: absolute;
+           left: 50%;/*moving it from the left by 50% towards the right*/
+           transform: translate(-50%);/*So that it is placed in the center-starting from the center and going to the right side*/}
+
+.indicator{position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;} /*CSS for the testimonials control buttons positioning*/
+ 
+ .btn{display: inline-block;
+      height: 15px;
+      width: 15px;
+      margin: 4px;
+      border-radius: 15px;
+      background:#5C747D;
+      cursor: pointer;
+      transition: 0.5s; /*so that indicator width changes smoothly when changing width size*/}/*CSS for the testimonial control buttons*/
+
+.active{width: 45px;}/*CSS for first button to increase the size*/
+
+.testimonial{width:100%;
+             height:100%;
+             overflow:hidden;} /*to hide the other testimonials as they are oferflowing thereby allowing for only one to be seen at a time*/
+
+
+.impact{margin-top: 40%;
+        text-align: center;
+        padding: 50px; /*create extra space from above reviews section}*/
+        margin-bottom: 5%;}/*styling for the impact section*/
+
+.impact p{margin-left: 5%;
+          padding-top: 20px;
+          margin-right: 5%;} /*stylingfor the impact section paragraph*/
+
+
+.rev-cont{margin-bottom: 5%;
+          width:100%;
+          background:#191b1b3a;
+          text-align:center;
+           padding-top:30px;}/*text in the center and padding on top*/
+    
+.rev-row{display:flex;
+            margin-top:5%;
+            justify-content:space-between;} /*styling and positioning to create row for the content under this class*/
+
+    
+.rev-column{flex-basis:31%; /*setting the initial size of the content/columns in this case to 31%*/
+              padding:10px 10px;
+              margin-bottom:5%;}
+
+.rev-cont h1{text-align: center;
+             padding: 10px;/*the padding creates space around the the text in this case at the top bottom and left right*/
+             line-height:22px; /*spacing between the lines of text*/
+             font-size: 15px;}   
+
+.rev-cont p{padding: 10px;
+            text-align:center;
+            font-size: 15px;
+            line-height:22px;
+            font-weight: 300;/*Reduces colour of font, making it less dark*/}
+
+
+/*Footer Section Content*/
+        
+.footer{background-color:#a6d0e4;
+        width: 100%; /*So that it doesn't fill the whole page*/
+        padding:30px 0;}
+
+.footer ul{list-style-type: none;}
+
+.footer-row{display:flex;
+            margin-top:2%;
+            justify-content: space-between;}
+
+.footer-info{margin-left: 2%;}
+                
+.footer-column{width:70%;
+               text-align: center;
+               padding: 0px 5px;
+               justify-content: center;}         
+   
+.social-icons {display:flex;
+               position:relative;
+               margin-left:60%;}/*move icons to the center of page*/          
+
+.social-icons a{/*link styling*/
+            text-decoration: none;
+            padding:  8px;
+            color: black;
+            margin: 10px;
+            border-radius: 50%;}
+        
+.social-icons a:hover{/*hove effect on background for icons*/
+                background-color: #111;
+                transition: 0.5s;
+            }
+
+.social-icons a:hover i{ /*hover effect on the icons*/
+                color: white;
+                transition: 0.5s;}    
